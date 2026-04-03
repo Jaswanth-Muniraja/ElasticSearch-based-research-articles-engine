@@ -90,6 +90,3 @@ By default, the backend scans a folder named `papers` located at the root of the
 - **Advanced Search**: Search through full-text, snippets, and domain-specific keywords.
 - **Admin Dashboard**: Edit article metadata and manage indexed papers securely.
 - **Real-time Sync**: Automatically indexes new files placed in the `papers/` folder.
-
-## 🛡️ License
-Distributed under the MIT License. See `LICENSE` for more information.
