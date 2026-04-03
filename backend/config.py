@@ -14,8 +14,8 @@ load_dotenv(dotenv_path=_env_path)
 # ── Elasticsearch ────────────────────────────────────────────────────────────
 ELASTICSEARCH_URL: str = os.getenv("ELASTICSEARCH_URL", "https://localhost:9200")
 ELASTICSEARCH_INDEX: str = os.getenv("ELASTICSEARCH_INDEX", "research_papers")
-ELASTICSEARCH_USERNAME: str = os.getenv("ELASTICSEARCH_USERNAME", "elastic")
-ELASTICSEARCH_PASSWORD: str = os.getenv("ELASTICSEARCH_PASSWORD", "Elastic@123")
+ELASTICSEARCH_USERNAME: str = os.getenv("ELASTICSEARCH_USERNAME", "qwerty")
+ELASTICSEARCH_PASSWORD: str = os.getenv("ELASTICSEARCH_PASSWORD", "abcdefg")
 
 # ── Papers folder (resolved relative to this file's parent) ──────────────────
 _raw_papers = os.getenv("PAPERS_FOLDER", "../papers")
@@ -36,9 +36,9 @@ API_HOST: str = os.getenv("API_HOST", "0.0.0.0")
 API_PORT: int = int(os.getenv("API_PORT", "8000"))
 
 # ── Admin credentials ────────────────────────────────────────────────────────
-ADMIN_EMAIL: str = os.getenv("ADMIN_EMAIL", "jaswanth@admin.com")
-ADMIN_PASSWORD: str = os.getenv("ADMIN_PASSWORD", "jashu@8881")
-JWT_SECRET: str = os.getenv("JWT_SECRET", "research-portal-admin-secret-key-2026")
+ADMIN_EMAIL: str = os.getenv("ADMIN_EMAIL", "qwerty@xyz.com")
+ADMIN_PASSWORD: str = os.getenv("ADMIN_PASSWORD", "qwerty@1234")
+JWT_SECRET: str = os.getenv("JWT_SECRET", "qwertyuiopasdfghjklzxcvbnm")
 
 # ── Domain keyword dictionaries ──────────────────────────────────────────────
 DOMAIN_KEYWORDS: dict[str, list[str]] = {
