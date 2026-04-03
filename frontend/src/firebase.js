@@ -4,12 +4,12 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAtWfV-vuZ7qXt6IdPzpP068rtwPHGqaJ0",
-  authDomain: "researchhubsdp.firebaseapp.com",
-  projectId: "researchhubsdp",
-  storageBucket: "researchhubsdp.firebasestorage.app",
-  messagingSenderId: "33812798653",
-  appId: "1:33812798653:web:57dd75d06e9beef5da6bd4",
+  apiKey: "qwertyuiop-asdfghjklzxcvbnm",
+  authDomain: "qwertyuiop.firebaseapp.com",
+  projectId: "qwertyuiop",
+  storageBucket: "qwertyuiop.firebasestorage.app",
+  messagingSenderId: "1234567890",
+  appId: "qwertyuiop1234567890asdfghjklzxcvbnm",
 };
 
 const app = initializeApp(firebaseConfig);
