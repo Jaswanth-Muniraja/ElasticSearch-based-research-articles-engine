@@ -1,0 +1,267 @@
+/* src/styles/LoginModal.css */
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background: transparent;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  padding: 20px;
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Close Button */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 1px;
+  background: none;
+  border: none;
+  font-size: 25px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #830F23;
+  transform: scale(1.2);
+}
+
+/* Login Form Styles */
+.login {
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.login:hover {
+  color: var(--accent);
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 450px;
+  width: 380px;
+  flex-direction: column;
+  gap: 25px;
+  background: var(--light);
+  border-radius: 16px;
+  padding: 35px 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Wave Group Input Styles */
+.wave-group {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.wave-group .input {
+  font-size: 1rem;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  border: none;
+  border-bottom: 1.5px solid #ccc;
+  background: transparent;
+  color: var(--dark);
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.wave-group .input:focus {
+  outline: none;
+  border-bottom-color: var(--primary);
+}
+
+.wave-group .label {
+  color: #777;
+  font-size: 1rem;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  display: flex;
+}
+
+.wave-group .label-char {
+  transition: 0.2s ease all;
+  transition-delay: calc(var(--index) * 0.04s);
+}
+
+.wave-group .input:focus~.label .label-char,
+.wave-group .input:valid~.label .label-char {
+  transform: translateY(-30px);
+  font-size: 1.1rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.wave-group .bar {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 300px;
+}
+
+.wave-group .bar:before,
+.wave-group .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  background: var(--primary);
+  transition: 0.3s ease all;
+}
+
+.wave-group .bar:before {
+  left: 50%;
+}
+
+.wave-group .bar:after {
+  right: 50%;
+}
+
+.wave-group .input:focus~.bar:before,
+.wave-group .input:focus~.bar:after {
+  width: 50%;
+}
+
+/* LoginModal.css */
+.error-message {
+  color: var(--primary);
+  font-size: 0.9em;
+  font-weight: 500;
+  text-align: center;
+  margin: 5px 0;
+  background: rgba(131, 15, 35, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+  display: block;
+  visibility: visible;
+  overflow: visible;
+  position: relative;
+  z-index: 10;
+  border-left: 3px solid var(--primary);
+}
+
+/* Enter Button */
+.enter {
+  height: 48px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--primary) 0%, #6A0F1E 100%);
+  color: var(--light);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  box-shadow: 0 4px 15px rgba(131, 15, 35, 0.2);
+}
+
+.enter:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(131, 15, 35, 0.3);
+}
+
+/* Toggle Form Link */
+.toggle-form {
+  font-size: 1.2em;
+  color: #555;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.toggle-form a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.toggle-form a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    min-height: 400px;
+    padding: 25px 15px;
+  }
+
+  .wave-group .input,
+  .wave-group .bar,
+  .error-message,
+  .enter {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .modal-content {
+    padding: 10px;
+    width: 95%;
+  }
+}

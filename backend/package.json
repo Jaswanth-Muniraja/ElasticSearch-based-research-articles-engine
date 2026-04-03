@@ -1,0 +1,21 @@
+{
+  "name": "elasticsearch-research-backend",
+  "version": "1.0.0",
+  "description": "FastAPI backend for Research Portal",
+  "main": "main.py",
+  "scripts": {
+    "start": "python main.py",
+    "dev": "uvicorn main:app --reload",
+    "install": "pip install -r requirements.txt",
+    "test": "pytest"
+  },
+  "keywords": [
+    "fastapi",
+    "elasticsearch",
+    "research-portal"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
+
